@@ -19,9 +19,9 @@ namespace Microsoft.PowerShell
         /// <param name="args">
         /// Command line arguments to the managed MSH
         /// </param>
-        public static int Main(string[] args)
+        public static void Main(string[] args)
         {
-            return Console.WriteLine(HotFixResources.NoEntriesFound);
+            Console.WriteLine(HotFixResources.NoEntriesFound);
         }
     }
 }

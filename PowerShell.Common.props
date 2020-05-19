@@ -62,9 +62,6 @@
       -->
       <PackageVersion>$(PSCoreBuildVersion)</PackageVersion>
 
-      <ApplicationIcon Condition="$(ProductVersion.Contains('preview'))">..\..\assets\Powershell_av_colors.ico</ApplicationIcon>
-      <ApplicationIcon Condition="!$(ProductVersion.Contains('preview'))">..\..\assets\Powershell_black.ico</ApplicationIcon>
-
     </PropertyGroup>
 
     <!-- Output For Debugging
@@ -113,7 +110,7 @@
 
   <ItemGroup>
     <!-- We skip this for Microsoft.Management.UI.Internal because we have to use a workaround for WPF project. -->
-    <EmbeddedResource Update = "resources/*.resx" Condition = "'$(MSBuildProjectName)' != 'Microsoft.Management.UI.Internal'">
+    <EmbeddedResource Update = "resources/*.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <StronglyTypedLanguage>CSharp</StronglyTypedLanguage>
 
